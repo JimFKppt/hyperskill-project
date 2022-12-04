@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="MusicAdvisorTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2022-11-09T12:13:28" hostname="DESKTOP-7MJ3K9R" time="10.404">
+  <properties/>
+  <testcase name="start" classname="MusicAdvisorTest" time="10.404"/>
+  <system-out><![CDATA[?[1;31m
+Start test 1?[0m
+> auth
+use this link to request the access code:
+http://127.0.0.1:45678/authorize?client_id=94da195546a04a109070b58886525577&redirect_uri=http://localhost:8080&response_type=code
+waiting for code...
+?[0;34mTester: making requests to redirect uri: http://localhost:8080
+?[0m?[0;34mTester: Error: null
+making http request for access_token...
+response:
+{"access_token":"456456","token_type":"Bearer","expires_in":3600,"refresh_token":"567567","scope":""}
+---SUCCESS---
+> featured
+---FEATURED---
+Mellow Morning
+Wake Up and Smell the Coffee
+Monday Motivation
+Songs to Sing in the Shower
+> exit
+---GOODBYE!---
+?[1;31m
+Start test 2?[0m
+> featured
+Please, provide access for application.
+> exit
+---GOODBYE!---
+?[1;31m
+Start test 3?[0m
+> new
+Please, provide access for application.
+> exit
+---GOODBYE!---
+]]></system-out>
+  <system-err><![CDATA[?[0;34mjava.net.ConnectException
+?[0m?[0;34m	at java.net.http/jdk.internal.net.http.HttpClientImpl.send(HttpClientImpl.java:573)
+?[0m?[0;34m	at java.net.http/jdk.internal.net.http.HttpClientFacade.send(HttpClientFacade.java:123)
+?[0m?[0;34m	at Server.run(Server.java:74)
+?[0m?[0;34mCaused by: java.net.ConnectException
+?[0m?[0;34m	at java.net.http/jdk.internal.net.http.common.Utils.toConnectException(Utils.java:1047)
+?[0m?[0;34m	at java.net.http/jdk.internal.net.http.PlainHttpConnection.connectAsync(PlainHttpConnection.java:198)
+?[0m?[0;34m	at java.net.http/jdk.internal.net.http.PlainHttpConnection.checkRetryConnect(PlainHttpConnection.java:230)
+?[0m?[0;34m	at java.net.http/jdk.internal.net.http.PlainHttpConnection.lambda$connectAsync$1(PlainHttpConnection.java:206)
+?[0m?[0;34m	at java.base/java.util.concurrent.CompletableFuture.uniHandle(CompletableFuture.java:934)
+?[0m?[0;34m	at java.base/java.util.concurrent.CompletableFuture$UniHandle.tryFire(CompletableFuture.java:911)
+?[0m?[0;34m	at java.base/java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:510)
+?[0m?[0;34m	at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1773)
+?[0m?[0;34m	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+?[0m?[0;34m	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+?[0m?[0;34m	at java.base/java.lang.Thread.run(Thread.java:833)
+?[0m?[0;34m	at java.base/jdk.internal.misc.InnocuousThread.run(InnocuousThread.java:162)
+?[0m?[0;34mCaused by: java.nio.channels.ClosedChannelException
+?[0m?[0;34m	at java.base/sun.nio.ch.SocketChannelImpl.ensureOpen(SocketChannelImpl.java:195)
+?[0m?[0;34m	at java.base/sun.nio.ch.SocketChannelImpl.beginConnect(SocketChannelImpl.java:760)
+?[0m?[0;34m	at java.base/sun.nio.ch.SocketChannelImpl.connect(SocketChannelImpl.java:848)
+?[0m?[0;34m	at java.net.http/jdk.internal.net.http.PlainHttpConnection.lambda$connectAsync$0(PlainHttpConnection.java:183)
+?[0m?[0;34m	at java.base/java.security.AccessController.doPrivileged(AccessController.java:569)
+?[0m?[0;34m	at java.net.http/jdk.internal.net.http.PlainHttpConnection.connectAsync(PlainHttpConnection.java:185)
+?[0m?[0;34m	... 10 more
+]]></system-err>
+</testsuite>
